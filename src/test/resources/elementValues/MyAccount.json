@@ -1,0 +1,117 @@
+[
+  {
+    "key": "TransferMoneyBtn",
+    "value": "//div[@class='css-175oi2r r-1i6wzkk r-lrvibr r-1loqt21 r-1otgn73 r-1awozwy r-169ebfh r-z2wwpe r-1777fci r-tsynxw r-16l9doz r-edyy15 r-iyfy8q']//div[text()='Transfer money']",
+    "type": "xpath"
+  },
+  {
+    "key": "AddMoneyBtn",
+    "value": "//div[@class='css-175oi2r r-1i6wzkk r-lrvibr r-1loqt21 r-1otgn73 r-1awozwy r-169ebfh r-z2wwpe r-1777fci r-tsynxw r-16l9doz r-edyy15 r-iyfy8q']//div[text()='Add money']",
+    "type": "xpath"
+  },
+  {
+    "key": "EditAccountBtn",
+    "value": "//div[@class='css-175oi2r r-1i6wzkk r-lrvibr r-1loqt21 r-1otgn73 r-1awozwy r-169ebfh r-z2wwpe r-1777fci r-tsynxw r-16l9doz r-edyy15 r-iyfy8q']//div[text()='Edit account']",
+    "type": "xpath"
+  },
+  {
+    "key": "TMTransferMoneyText",
+    "value": "//div[@class='css-146c3p1 r-ubezar r-vw2c0b' and text()='Transfer money']",
+    "type": "xpath"
+  },
+  {
+    "key": "AMAddMoneyText",
+    "value": "//div[@class='css-146c3p1 r-ubezar r-vw2c0b' and text()='Add money']",
+    "type": "xpath"
+  },
+  {
+    "key": "EAEditAccountText",
+    "value": "//div[@class='css-146c3p1 r-ubezar r-vw2c0b' and text()='Edit account']",
+    "type": "xpath"
+  },
+  {
+    "key": "TMSenderAccountDropdown",
+    "value": "(//div[@class='css-175oi2r r-1777fci']//select)[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "TMSenderReceiverDropdown",
+    "value": "(//div[@class='css-175oi2r r-1777fci']//select)[2]",
+    "type": "xpath"
+  },
+  {
+    "key": "TMAmountTextBox",
+    "value": "input[class='css-11aywtz r-6taxm2 r-1eh6qqt r-z2wwpe r-rs99b7 r-h3s6tt r-1qhn6m8']",
+    "type": "css"
+  },
+  {
+    "key": "TMSendBtn",
+    "value": "div[class='css-175oi2r r-1i6wzkk r-lrvibr r-1loqt21 r-1otgn73 r-1awozwy r-169ebfh r-z2wwpe r-h3s6tt r-1777fci r-tsynxw r-13qz1uu']",
+    "type": "css"
+  },
+  {
+    "key": "FirstSenderTextValue",
+    "value": "((//div[@class='css-175oi2r r-13qz1uu'])[1]//div[@class='css-146c3p1 r-1ozpqpt r-yv33h5 r-1b43r93 r-6e0ovw'])[1]",
+    "type": "xpath"
+  },
+  {
+    "key": "FirstReceiverTextValue",
+    "value": "((//div[@class='css-175oi2r r-13qz1uu'])[1]//div[@class='css-146c3p1 r-1ozpqpt r-yv33h5 r-1b43r93 r-6e0ovw'])[2]",
+    "type": "xpath"
+  },
+  {
+    "key": "FirstAmountTextValue",
+    "value": "(//div[@class='css-175oi2r r-13qz1uu'])[1]//div//div[@class='css-146c3p1 r-1ozpqpt r-yv33h5 r-1b43r93']",
+    "type": "xpath"
+  },
+  {
+    "key": "AMCardNumberTextBox",
+    "value": "//div[text()='Card number']//..//input[@class='css-11aywtz r-6taxm2 r-1mqtkb5 r-z2wwpe r-rs99b7 r-h3s6tt r-1qhn6m8']",
+    "type": "xpath"
+  },
+  {
+    "key": "AMCardHolderTextBox",
+    "value": "//div[text()='Card holder']//..//input[@class='css-11aywtz r-6taxm2 r-1mqtkb5 r-z2wwpe r-rs99b7 r-h3s6tt r-1qhn6m8']",
+    "type": "xpath"
+  },
+  {
+    "key": "AMExpiryDateTextBox",
+    "value": "//div[text()='Expiry date']//..//input[@class='css-11aywtz r-6taxm2 r-1mqtkb5 r-z2wwpe r-rs99b7 r-h3s6tt r-1qhn6m8']",
+    "type": "xpath"
+  },
+  {
+    "key": "AMCVVTextBox",
+    "value": "//div[text()='CVV']//..//input[@class='css-11aywtz r-6taxm2 r-1mqtkb5 r-z2wwpe r-rs99b7 r-h3s6tt r-1qhn6m8']",
+    "type": "xpath"
+  },
+  {
+    "key": "AMAmountTextBox",
+    "value": "//div[text()='Amount']//..//input",
+    "type": "xpath"
+  },
+  {
+    "key": "AMAddBtn",
+    "value": "div[class='css-175oi2r r-1i6wzkk r-lrvibr r-1loqt21 r-1otgn73 r-1awozwy r-169ebfh r-z2wwpe r-h3s6tt r-1777fci r-tsynxw r-13qz1uu']",
+    "type": "css"
+  },
+  {
+    "key": "MyAccountAmountText",
+    "value": "//div[text()='Amount']//..//div[@class='css-146c3p1 r-1ozpqpt r-yv33h5 r-1b43r93']",
+    "type": "xpath"
+  },
+  {
+    "key": "EAAccountNameTextBox",
+    "value": "input[class='css-11aywtz r-6taxm2 r-1eh6qqt r-z2wwpe r-rs99b7 r-h3s6tt r-1qhn6m8']",
+    "type": "css"
+  },
+  {
+    "key": "EAUpdateBtn",
+    "value": "div[class='css-175oi2r r-1i6wzkk r-lrvibr r-1loqt21 r-1otgn73 r-1awozwy r-169ebfh r-z2wwpe r-h3s6tt r-1777fci r-tsynxw r-13qz1uu']",
+    "type": "css"
+  },
+  {
+    "key": "MyAccountAccountNameText",
+    "value": "//div[text()='Account name']//..//div[@class='css-146c3p1 r-1ozpqpt r-yv33h5 r-1b43r93']",
+    "type": "xpath"
+  }
+]

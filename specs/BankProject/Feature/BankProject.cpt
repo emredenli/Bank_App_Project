@@ -1,0 +1,127 @@
+
+# BankProject - Username <username>, Password <password> Login olunur
+* "UsernameTextBox" li elementi bul, temizle ve <username> değerini yaz
+* "UsernameTextBox" elementinin value degeri <username> degerine sahip mi
+* "PassswordTextBox" li elementi bul, temizle ve <password> değerini yaz
+* "PassswordTextBox" elementinin value degeri <password> degerine sahip mi
+
+# BankProject - 'Login' butonuna tiklanir
+* "LoginBtn" elementine javascript ile tıkla
+
+# BankProject - 'OpenMoneyTransfer' butonuna tiklanir
+* "OpenMoneyTransfer" elementine javascript ile tıkla
+
+# BankProject - Login olunur
+* BankProject - Username "emre.denli@testinium.com", Password "emreD455" Login olunur
+* BankProject - 'Login' butonuna tiklanir
+
+# BankProject - 'Transfer Money' butonuna tiklanir
+* "TransferMoneyBtn" elementine javascript ile tıkla
+
+# BankProject - 'Add Money' butonuna tiklanir
+* "AddMoneyBtn" elementine javascript ile tıkla
+
+# BankProject - 'Edit Account' butonuna tiklanir
+* "EditAccountBtn" elementine javascript ile tıkla
+
+# BankProject - Transfer Money - 'Transfer Money' textinin var oldugu kontrol edilir
+* "TMTransferMoneyText" elementinin var olduğu kontrol edilir
+
+# BankProject - Add Money - 'Add Money' textinin var oldugu kontrol edilir
+* "AMAddMoneyText" elementinin var olduğu kontrol edilir
+
+# BankProject - Edit Account - 'Edit Account' textinin var oldugu kontrol edilir
+* "EAEditAccountText" elementinin var olduğu kontrol edilir
+
+# BankProject - Transfer Money - Sender Account <senderAccount> secilir
+* "TMSenderAccountDropdown" elementinin var olduğu kontrol edilir
+* "TMSenderAccountDropdown" olarak comboboxtan <senderAccount> seçimini yap
+
+# BankProject - Transfer Money - Receiver Account <receiverAccount> secilir
+* "TMSenderReceiverDropdown" elementinin var olduğu kontrol edilir
+* "TMSenderReceiverDropdown" olarak comboboxtan <receiverAccount> seçimini yap
+
+# BankProject - Transfer Money - Amount <amount> yazilir
+* "TMAmountTextBox" elementinin var olduğu kontrol edilir
+* "TMAmountTextBox" li elementi bul, temizle ve <amount> değerini yaz
+
+# BankProject - Transfer Money - Amount'un 'Value' <amount> degerine sahip mi
+* "TMAmountTextBox" elementinin "value" niteliği <amount> değerini içeriyor mu
+
+# BankProject - Transfer Money - 'Send' butonuna tiklanir
+* "TMSendBtn" elementinin var olduğu kontrol edilir
+* "TMSendBtn" elementine javascript ile tıkla
+* "250" milisaniye bekle
+
+# BankProject - Sender'in 'Text' degeri, <senderText> degerine sahip mi
+* "FirstSenderTextValue" elementinin text değeri <senderText> değerini içeriyor mu
+
+# BankProject - Receiver'in 'Text' degeri, <receiverText> degerine sahip mi
+* "FirstReceiverTextValue" elementinin text değeri <receiverText> değerini içeriyor mu
+
+# BankProject - Amount'un 'Text' degeri, 'AmountValueText' keyindeki degere sahip mi
+* "FirstAmountTextValue" elementin text degeriyle, "AmountValueText" elementinin text degerini iceriyor mu
+
+# BankProject - Transfer Money - Transfer Money penceresindeki 'Amount' degerini 'AmountValueText' anahtarinda tutulur
+* "TMAmountTextBox" elementinin "value" attribute değerini "AmountValueText" keyinde tut
+
+# BankProject - My Account - 'Amount' degerini 'FirstMyAccountAmountText' anahtarinda tutulur
+* "MyAccountAmountText" elementinin text değerini "FirstMyAccountAmountText" keyinde tut
+
+# BankProject - My Account - 'Amount' degerini 'SecondMyAccountAmountText' anahtarinda tutulur
+* "MyAccountAmountText" elementinin text değerini "SecondMyAccountAmountText" keyinde tut
+
+# BankProject - Add Money - Card Number <cardNumber> yazilir
+* "AMCardNumberTextBox" elementinin var olduğu kontrol edilir
+* "AMCardNumberTextBox" li elementi bul, temizle ve <cardNumber> değerini yaz
+
+# BankProject - Add Money - Card Holder <cardHolder> yazilir
+* "AMCardHolderTextBox" elementinin var olduğu kontrol edilir
+* "AMCardHolderTextBox" li elementi bul, temizle ve <cardHolder> değerini yaz
+
+# BankProject - Add Money - Expiry Date <expiryDate> yazilir
+* "AMExpiryDateTextBox" elementinin var olduğu kontrol edilir
+* "AMExpiryDateTextBox" li elementi bul, temizle ve <expiryDate> değerini yaz
+
+# BankProject - Add Money - CVV <cvv> yazilir
+* "AMCVVTextBox" elementinin var olduğu kontrol edilir
+* "AMCVVTextBox" li elementi bul, temizle ve <cvv> değerini yaz
+
+# BankProject - Add Money - Amount <amount> yazilir
+* "AMAmountTextBox" elementinin var olduğu kontrol edilir
+* "AMAmountTextBox" li elementi bul, temizle ve <amount> değerini yaz
+
+# BankProject - Add Money - 'Add' butonuna tiklanir
+* "AMAddBtn" elementinin var olduğu kontrol edilir
+* "AMAddBtn" elementine javascript ile tıkla
+* "250" milisaniye bekle
+
+# BankProject - Add Money - Add Money penceresindeki 'Amount' degerini 'AmountValueText' anahtarinda tutulur
+* "AMAmountTextBox" elementinin "value" attribute değerini "AmountValueText" keyinde tut
+
+# BankProject - My Account - 'Transfer Money' Hesaba gelen/gonderilen para miktari kontrol edilir
+* "transferMoney" Hesaba gelen/gonderilen para miktari kontrol edilir
+
+# BankProject - My Account - 'Add Money' Hesaba gelen/gonderilen para miktari kontrol edilir
+* "addMoney" Hesaba gelen/gonderilen para miktari kontrol edilir
+
+# BankProject - Edit Account - Account Name <accountName> yazilir
+* "EAAccountNameTextBox" elementinin var olduğu kontrol edilir
+* "EAAccountNameTextBox" li elementi bul, temizle ve <accountName> değerini yaz
+* "250" milisaniye bekle
+
+# BankProject - Edit Account - 'Update' butonuna tiklanir
+* "EAUpdateBtn" elementinin var olduğu kontrol edilir
+* "EAUpdateBtn" elementine javascript ile tıkla
+
+# BankProject - Edit Account - Edit Account penceresindeki 'Account Name' degerini 'AccountNameText' anahtarinda tutulur
+* "EAAccountNameTextBox" elementinin "value" attribute değerini "AccountNameText" keyinde tut
+
+# BankProject - Account Name 'Text' degeri, 'AccountNameText' keyindeki degere sahip mi
+* "MyAccountAccountNameText" elementin text degeriyle, "AccountNameText" elementinin text degerini iceriyor mu
+
+
+
+
+
+
