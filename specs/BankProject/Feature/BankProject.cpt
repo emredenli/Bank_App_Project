@@ -8,6 +8,15 @@
 # BankProject - 'Login' butonuna tiklanir
 * "LoginBtn" elementine javascript ile tıkla
 
+# BankProject - 'Username or Password Invalid!' textinin var oldugu kontrol edilir
+* "UsernameOrPasswordInvalidText" elementinin var olduğu kontrol edilir
+
+# BankProject - 'Username or Password Invalid!' textinin var olmadigi kontrol edilir
+* "UsernameOrPasswordInvalidText" elementinin var olmadığı kontrol edilir
+
+# BankProject - Hesap ayarlarini sifirla
+* Hesap ayarlarini sifirla
+
 # BankProject - 'OpenMoneyTransfer' butonuna tiklanir
 * "OpenMoneyTransfer" elementine javascript ile tıkla
 
@@ -22,6 +31,7 @@
 * "AddMoneyBtn" elementine javascript ile tıkla
 
 # BankProject - 'Edit Account' butonuna tiklanir
+* "EditAccountBtn" elementinin var olduğu kontrol edilir
 * "EditAccountBtn" elementine javascript ile tıkla
 
 # BankProject - Transfer Money - 'Transfer Money' textinin var oldugu kontrol edilir
@@ -40,6 +50,7 @@
 # BankProject - Transfer Money - Receiver Account <receiverAccount> secilir
 * "TMSenderReceiverDropdown" elementinin var olduğu kontrol edilir
 * "TMSenderReceiverDropdown" olarak comboboxtan <receiverAccount> seçimini yap
+* Chrome alerti Ok butonuna basilir
 
 # BankProject - Transfer Money - Amount <amount> yazilir
 * "TMAmountTextBox" elementinin var olduğu kontrol edilir
@@ -113,12 +124,19 @@
 # BankProject - Edit Account - 'Update' butonuna tiklanir
 * "EAUpdateBtn" elementinin var olduğu kontrol edilir
 * "EAUpdateBtn" elementine javascript ile tıkla
+* "250" milisaniye bekle
 
 # BankProject - Edit Account - Edit Account penceresindeki 'Account Name' degerini 'AccountNameText' anahtarinda tutulur
 * "EAAccountNameTextBox" elementinin "value" attribute değerini "AccountNameText" keyinde tut
+* "250" milisaniye bekle
 
 # BankProject - Account Name 'Text' degeri, 'AccountNameText' keyindeki degere sahip mi
+* "250" milisaniye bekle
 * "MyAccountAccountNameText" elementin text degeriyle, "AccountNameText" elementinin text degerini iceriyor mu
+
+# BankProject - Transfer Money - Sender Account 'Text' degeri, 'AccountNameText' keyindeki degere sahip mi
+* "250" milisaniye bekle
+* "TMSenderAccountOptionText" elementin text degeriyle, "AccountNameText" elementinin text degerini iceriyor mu
 
 
 

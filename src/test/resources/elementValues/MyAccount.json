@@ -113,5 +113,15 @@
     "key": "MyAccountAccountNameText",
     "value": "//div[text()='Account name']//..//div[@class='css-146c3p1 r-1ozpqpt r-yv33h5 r-1b43r93']",
     "type": "xpath"
+  },
+  {
+    "key": "MyAccountText",
+    "value": "//div[@class='css-146c3p1 r-1gknse6 r-1b43r93' and text()='My account']",
+    "type": "xpath"
+  },
+  {
+    "key": "TMSenderAccountOptionText",
+    "value": "option[value='4432c869-b5e0-4a81-be0e-58bc950d70fc']",
+    "type": "css"
   }
 ]

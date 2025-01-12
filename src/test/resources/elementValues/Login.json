@@ -18,5 +18,10 @@
     "key": "OpenMoneyTransfer",
     "value": "//div[@class='css-146c3p1 r-jwli3a r-1b43r93' and text()='Open Money Transfer']",
     "type": "xpath"
+  },
+  {
+    "key": "UsernameOrPasswordInvalidText",
+    "value": "//div[@class='css-146c3p1 r-howw7u r-1b43r93' and text()='Username or Password Invalid!']",
+    "type": "xpath"
   }
 ]

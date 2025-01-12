@@ -1,12 +1,21 @@
 BankProject
 ================
 
+BankProject - Basarisiz Login
+--------------------------------------
+Tags: BankProject_BasarisizLogin
+
+* BankProject - Username "asd@testinium.com", Password "asd" Login olunur
+* BankProject - 'Login' butonuna tiklanir
+* BankProject - 'Username or Password Invalid!' textinin var oldugu kontrol edilir
+
 BankProject - Transfer Money
 ---------------------------------------------
 Tags: BankProject_TransferMoney
 
 * BankProject - Login olunur
 * BankProject - 'OpenMoneyTransfer' butonuna tiklanir
+* BankProject - Hesap ayarlarini sifirla
 * BankProject - 'Transfer Money' butonuna tiklanir
 * BankProject - Transfer Money - 'Transfer Money' textinin var oldugu kontrol edilir
 * BankProject - Transfer Money - Sender Account "Emre Denli" secilir
@@ -25,6 +34,7 @@ Tags: BankProject_TransferMoney_HesabaGelenGonderilenParaMiktariDogruOlarakEklen
 
 * BankProject - Login olunur
 * BankProject - 'OpenMoneyTransfer' butonuna tiklanir
+* BankProject - Hesap ayarlarini sifirla
 * BankProject - My Account - 'Amount' degerini 'FirstMyAccountAmountText' anahtarinda tutulur
 * BankProject - 'Transfer Money' butonuna tiklanir
 * BankProject - Transfer Money - 'Transfer Money' textinin var oldugu kontrol edilir
@@ -43,6 +53,7 @@ Tags: BankProject_AddMoney
 
 * BankProject - Login olunur
 * BankProject - 'OpenMoneyTransfer' butonuna tiklanir
+* BankProject - Hesap ayarlarini sifirla
 * BankProject - 'Add Money' butonuna tiklanir
 * BankProject - Add Money - 'Add Money' textinin var oldugu kontrol edilir
 * BankProject - Add Money - 'Add' butonuna tiklanir
@@ -63,6 +74,7 @@ Tags: BankProject_AddMoney_HesabaGelenGonderilenParaMiktariDogruOlarakEklenmisCi
 
 * BankProject - Login olunur
 * BankProject - 'OpenMoneyTransfer' butonuna tiklanir
+* BankProject - Hesap ayarlarini sifirla
 * BankProject - My Account - 'Amount' degerini 'FirstMyAccountAmountText' anahtarinda tutulur
 * BankProject - 'Add Money' butonuna tiklanir
 * BankProject - Add Money - 'Add Money' textinin var oldugu kontrol edilir
@@ -83,11 +95,40 @@ Tags: BankProject_EditAccount
 
 * BankProject - Login olunur
 * BankProject - 'OpenMoneyTransfer' butonuna tiklanir
+* BankProject - Hesap ayarlarini sifirla
 * BankProject - 'Edit Account' butonuna tiklanir
 * BankProject - Edit Account - 'Edit Account' textinin var oldugu kontrol edilir
 * BankProject - Edit Account - Account Name "emredenli" yazilir
 * BankProject - Edit Account - Edit Account penceresindeki 'Account Name' degerini 'AccountNameText' anahtarinda tutulur
 * BankProject - Edit Account - 'Update' butonuna tiklanir
 * BankProject - Account Name 'Text' degeri, 'AccountNameText' keyindeki degere sahip mi
+
+BankProject - Edit Account Sonrasi Transfer Money / Sender Account Text Kontrolu
+------------------------------------------------------------------------------------------
+Tags: BankProject_EditAccountSonrasiTransferMoneySenderAccountTextKontrolu
+
+* BankProject - Login olunur
+* BankProject - 'OpenMoneyTransfer' butonuna tiklanir
+* BankProject - Hesap ayarlarini sifirla
+* BankProject - 'Edit Account' butonuna tiklanir
+* BankProject - Edit Account - 'Edit Account' textinin var oldugu kontrol edilir
+* BankProject - Edit Account - Account Name "emredenli" yazilir
+* BankProject - Edit Account - Edit Account penceresindeki 'Account Name' degerini 'AccountNameText' anahtarinda tutulur
+* BankProject - Edit Account - 'Update' butonuna tiklanir
+* BankProject - Account Name 'Text' degeri, 'AccountNameText' keyindeki degere sahip mi
+* BankProject - 'Transfer Money' butonuna tiklanir
+* BankProject - Transfer Money - 'Transfer Money' textinin var oldugu kontrol edilir
+* BankProject - Transfer Money - Sender Account 'Text' degeri, 'AccountNameText' keyindeki degere sahip mi
+
+BankProject - Ana Paranin Sifirdan Kucuk Olma Durumunun Kontrolu
+-------------------------------------------------------------------------
+Tags: BankProject_AnaParaninSifirdanKucukOlmaDurumununKontrolu
+
+* BankProject - Login olunur
+* BankProject - 'OpenMoneyTransfer' butonuna tiklanir
+* BankProject - Hesap ayarlarini sifirla
+* 'Hesap bakiyesi sifirin altina dusuyor mu?' kontrol edilir
+
+
 
 

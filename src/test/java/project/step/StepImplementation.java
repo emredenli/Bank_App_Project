@@ -1,5 +1,6 @@
 package project.step;
 
+import org.apache.xpath.operations.Bool;
 import project.driver.Driver;
 import project.methods.Methods;
 import project.model.ElementInfo;
@@ -12,8 +13,12 @@ import org.openqa.selenium.support.ui.*;
 import org.openqa.selenium.Keys;
 
 import java.io.File;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.Timestamp;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.*;
@@ -242,6 +247,11 @@ public class StepImplementation extends Driver {
 
     }
 
+    @Step("Sayfayı yenile")
+    public void refreshPage() {
+        driver.navigate().refresh();
+    }
+
     @Step("<key> elementinin text değeri <expectedText> değerini içeriyor mu")
     public void controlElementTextContain(String key, String expectedText) {
 
@@ -294,6 +304,152 @@ public class StepImplementation extends Driver {
         } catch (NumberFormatException e) {
             System.out.println("Geçersiz format");
         }
+
+    }
+
+    public void resetAccountName() {
+        if(  (findElement("MyAccountAccountNameText").getText()).equals("Emre Denli")  ) {
+            System.out.println("Account Name : " + findElement("MyAccountAccountNameText").getText());
+        } else {
+            //Boolean blnAccountName = false;
+            for( int i = 0 ; i < 3 ; i++ ) {
+                clickToElementWithJavaScript("EditAccountBtn");
+                checkElementExist("EAEditAccountText");
+                sendKeysByKey("EAAccountNameTextBox", "Emre Denli");
+                waitByMilliSeconds(250);
+                clickToElementWithJavaScript("EAUpdateBtn");
+                waitByMilliSeconds(250);
+                if ((findElement("MyAccountAccountNameText").getText()).equals("Emre Denli"))
+                    break;
+                //blnAccountName = (findElement("MyAccountAccountNameText").getText()).equals("Emre Denli");
+            }
+        }
+    }
+
+    public void resetMoney(){
+
+        for(int x = 0 ; x < 5 ; x++) {
+            String amountValueStr = replaceFormat((findElement("MyAccountAmountText").getText()), ",","");
+            System.out.println(amountValueStr);
+            Double amountValueDouble = Double.parseDouble(amountValueStr);
+            String amnt = "100000.00";
+
+            if( amountValueStr.equals(amnt)  ) {
+                System.out.println("Amount : " + (findElement("MyAccountAmountText").getText()));
+                break;
+            } else {
+                for( int y = 0 ; y < 3 ; y++ ){
+                    if ( amountValueDouble > 100000.00 ) {
+                        Double transferMoney = (amountValueDouble - 100000.00) - 100;
+                        DecimalFormat df = new DecimalFormat("#.##"); // Up to 2 decimal places
+                        String formattedTMoney = df.format(transferMoney);
+                        System.out.println("formattedTMoney : " + formattedTMoney);
+                        formattedTMoney = replaceFormat(formattedTMoney, ",",".");
+                        clickToElementWithJavaScript("TransferMoneyBtn");
+                        selectDropDown("TMSenderAccountDropdown","Emre Denli");
+                        selectDropDown("TMSenderReceiverDropdown","Testinium-4");
+                        chromeAlert();
+                        sendKeysByKey("TMAmountTextBox",formattedTMoney);
+                        clickToElementWithJavaScript("TMSendBtn");
+                        waitByMilliSeconds(2000);
+                        break;
+
+                    } else if ( 0 < amountValueDouble & amountValueDouble < 100000.00 ) {
+                        Double addMoney = (100000.00 - amountValueDouble)/3;
+                        DecimalFormat df = new DecimalFormat("#.##"); // Up to 2 decimal places
+                        String formattedAMoney = df.format(addMoney);
+                        System.out.println("formattedTMoney : " + formattedAMoney);
+                        formattedAMoney = replaceFormat(formattedAMoney, ",",".");
+                        clickToElementWithJavaScript("AddMoneyBtn");
+                        clickToElementWithJavaScript("AMAddBtn");
+                        waitByMilliSeconds(250);
+                        sendKeysByKey("AMCardNumberTextBox","1234123412341234");
+                        sendKeysByKey("AMCardHolderTextBox","Deneme");
+                        sendKeysByKey("AMExpiryDateTextBox","10/26");
+                        sendKeysByKey("AMCVVTextBox","110");
+                        sendKeysByKey("AMAmountTextBox",formattedAMoney);
+                        clickElement("AMAddBtn");
+                        waitByMilliSeconds(2000);
+                        break;
+
+                    }
+                    else if ( amountValueDouble < 0 ) {
+                        Double addMoney = (-(amountValueDouble))/3 + 100000.00;
+                        DecimalFormat df = new DecimalFormat("#.##"); // Up to 2 decimal places
+                        String formattedAMoney = df.format(addMoney);
+                        System.out.println("formattedTMoney : " + formattedAMoney);
+                        formattedAMoney = replaceFormat(formattedAMoney, ",",".");
+                        clickToElementWithJavaScript("AddMoneyBtn");
+                        clickToElementWithJavaScript("AMAddBtn");
+                        waitByMilliSeconds(250);
+                        sendKeysByKey("AMCardNumberTextBox","1234123412341234");
+                        sendKeysByKey("AMCardHolderTextBox","Deneme");
+                        sendKeysByKey("AMExpiryDateTextBox","10/26");
+                        sendKeysByKey("AMCVVTextBox","110");
+                        sendKeysByKey("AMAmountTextBox",formattedAMoney);
+                        clickElement("AMAddBtn");
+                        waitByMilliSeconds(2000);
+                        break;
+
+                    }else {
+                        System.out.println("Amount : " + amountValueDouble);
+                        break;
+                    }
+                }
+            }
+        }
+
+    }
+
+    @Step("Hesap ayarlarini sifirla")
+    public void resetAccountSettings() {
+
+        resetAccountName();
+        waitByMilliSeconds(1000);
+        checkElementExist("MyAccountText");
+        refreshPage();
+        waitByMilliSeconds(1000);
+        checkElementExist("OpenMoneyTransfer");
+        clickToElementWithJavaScript("OpenMoneyTransfer");
+        resetMoney();
+        waitByMilliSeconds(1000);
+        checkElementExist("MyAccountText");
+        refreshPage();
+        waitByMilliSeconds(1000);
+        checkElementExist("OpenMoneyTransfer");
+        clickToElementWithJavaScript("OpenMoneyTransfer");
+        waitByMilliSeconds(1000);
+
+    }
+
+    @Step("'Hesap bakiyesi sifirin altina dusuyor mu?' kontrol edilir")
+    public void negativeAmountControl() {
+
+        String amountValueStr = replaceFormat((findElement("MyAccountAmountText").getText()), ",","");
+        System.out.println(amountValueStr);
+        Double amountValueDouble = Double.parseDouble(amountValueStr);
+
+        Double transferMoney = (amountValueDouble + 100);
+        DecimalFormat df = new DecimalFormat("#.##"); // Up to 2 decimal places
+        String formattedTMoney = df.format(transferMoney);
+        System.out.println("formattedTMoney : " + formattedTMoney);
+        formattedTMoney = replaceFormat(formattedTMoney, ",",".");
+        //String tMoney = String.valueOf(transferMoney);
+        clickToElementWithJavaScript("TransferMoneyBtn");
+        selectDropDown("TMSenderAccountDropdown","Emre Denli");
+        selectDropDown("TMSenderReceiverDropdown","Testinium-4");
+        chromeAlert();
+        sendKeysByKey("TMAmountTextBox",formattedTMoney);
+        clickToElementWithJavaScript("TMSendBtn");
+        waitByMilliSeconds(2000);
+        Boolean bln = ((findElement("MyAccountAmountText").getText()).contains("-"));
+        assertEquals(bln.equals(false),"Hesap bakiyesi sifirin altina dusemez!");
+    }
+
+    @Step("Chrome alerti Ok butonuna basilir")
+    public void chromeAlert() {
+
+        driver.switchTo().alert().accept();
 
     }
 
